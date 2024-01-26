@@ -173,15 +173,6 @@ std::string& ULListStr::get(size_t loc)
   return *ptr;
 }
 
-std::string const & ULListStr::get(size_t loc) const
-{
-  std::string* ptr = getValAtLoc(loc);
-  if(ptr == NULL){
-    throw std::invalid_argument("Bad location");
-  }
-  return *ptr;
-}
-
 void ULListStr::clear()
 {
   while(head_ != NULL){
